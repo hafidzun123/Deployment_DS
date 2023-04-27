@@ -8,7 +8,6 @@
 # =[Modules dan Packages]========================
 
 from flask import Flask,render_template,request,jsonify
-from flask_ngrok import run_with_ngrok
 import pandas as pd
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
@@ -74,7 +73,7 @@ if __name__ == '__main__':
 	model = load('model_iris_dt.model')
 
 	# Run Flask di localhost
-	run_with_ngrok(app.run(host="localhost", port=4719, debug=True))
+	app.run(host="localhost", port=3210, debug=True)
 	
 	
 	
